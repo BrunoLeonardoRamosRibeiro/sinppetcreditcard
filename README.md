@@ -1,4 +1,4 @@
-# sinppetcreditcard
+# snippetcreditcard
 
 Funcionalidades do Credit Card
 
