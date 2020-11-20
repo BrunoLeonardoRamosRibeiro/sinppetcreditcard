@@ -1,6 +1,10 @@
-# sinppetcreditcard
+# snippetcreditcard
 
 Funcionalidades do Credit Card
+
+## Packages:
+- FlipCard
+- BrasilFields
 
 ## Getting Started
 
