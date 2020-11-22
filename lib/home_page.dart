@@ -11,30 +11,35 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Pagamento'),
-      ),
-      body: SingleChildScrollView(
-        child: Form(
-          autovalidateMode: AutovalidateMode.always,
-          key: formKey,
-          child: Column(
-            children: [
-              CreditCardWidget(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(
-                  child: Text('Finalizar Pedido'),
-                  onPressed: (){
-                    if(formKey.currentState.validate()){
-                      print('Validado OK!');
-                    }
-                  },
+    return GestureDetector(
+      onTap: (){
+        FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Pagamento'),
+        ),
+        body: SingleChildScrollView(
+          child: Form(
+            autovalidateMode: AutovalidateMode.always,
+            key: formKey,
+            child: Column(
+              children: [
+                CreditCardWidget(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    child: Text('Finalizar Pedido'),
+                    onPressed: (){
+                      if(formKey.currentState.validate()){
+                        print('Validado OK!');
+                      }
+                    },
 
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
