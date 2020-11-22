@@ -6,6 +6,14 @@ import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:sinppetcreditcard/components/card_text_field.dart';
 
 class CardFront extends StatelessWidget {
+
+  final FocusNode numberFocus;
+  final FocusNode dateFocus;
+  final FocusNode nameFocus;
+  final VoidCallback finished;
+
+  CardFront({this.numberFocus, this.dateFocus, this.nameFocus, this.finished});
+
   final dateFormatter = MaskTextInputFormatter(
     mask: '!#/####',
     filter: {'#': RegExp('[0-9]'), '!': RegExp('[0-1]')},
@@ -18,7 +26,6 @@ class CardFront extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       elevation: 10,
       child: Container(
-        //color: const Color(0xFF1B4B52),
         color: Colors.purple,
         height: 200,
         padding: const EdgeInsets.all(24),
@@ -42,6 +49,10 @@ class CardFront extends StatelessWidget {
                       else if (detectCCType(number) == CreditCardType.unknown) return 'Inválido';
                       return null;
                     },
+                    onSubmitted: (text){
+                      dateFocus.requestFocus();
+                    },
+                    focusNode: numberFocus,
                   ),
                   CardTextField(
                     title: 'Validade',
@@ -54,6 +65,10 @@ class CardFront extends StatelessWidget {
                       if(date.length != 7) return 'Inválido';
                       return null;
                     },
+                    onSubmitted: (text){
+                      nameFocus.requestFocus();
+                    },
+                    focusNode: dateFocus,
                   ),
                   CardTextField(
                     title: 'Titular',
@@ -64,6 +79,11 @@ class CardFront extends StatelessWidget {
                       if (name.isEmpty) return 'Inválido';
                       return null;
                     },
+                    onSubmitted: (text){
+                      finished();
+
+                    },
+                    focusNode: nameFocus,
                   ),
                 ],
               ),
