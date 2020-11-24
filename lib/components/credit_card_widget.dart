@@ -19,7 +19,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget> {
 
   KeyboardActionsConfig _buildConfig(BuildContext context){
     return KeyboardActionsConfig(
-      keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
+      keyboardActionsPlatform: KeyboardActionsPlatform.ANDROID,
       keyboardBarColor: Colors.grey[200],
       actions: [
         KeyboardActionsItem(focusNode: numberFocus, displayDoneButton: false ),

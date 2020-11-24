@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sinppetcreditcard/components/credit_card_widget.dart';
+import 'package:sinppetcreditcard/with_component_credit_card_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -34,6 +36,18 @@ class _HomePageState extends State<HomePage> {
                       if(formKey.currentState.validate()){
                         print('Validado OK!');
                       }
+                    },
+
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    child: Text('TELA COM MY SAMPLE'),
+                    onPressed: (){
+
+                      Get.to(MySample(), transition: Transition.topLevel, );
+
                     },
 
                   ),

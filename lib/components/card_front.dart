@@ -50,7 +50,7 @@ class CardFront extends StatelessWidget {
                       return null;
                     },
                     onSubmitted: (text){
-                      dateFocus.requestFocus();
+                      nameFocus.requestFocus();
                     },
                     focusNode: numberFocus,
                   ),
@@ -59,6 +59,7 @@ class CardFront extends StatelessWidget {
                     hint: '11/2020',
                     textInputType: TextInputType.number,
                     inputFormatters: [
+                      FilteringTextInputFormatter.digitsOnly,
                       dateFormatter,
                     ],
                     validator: (date){

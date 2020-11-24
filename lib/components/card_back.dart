@@ -33,7 +33,7 @@ class CardBack extends StatelessWidget {
                     margin: const EdgeInsets.only(left: 12),
                     padding:
                         const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                    child: CardTextField(
+/*                    child: CardTextField(
                       hint: '123',
                       maxLength: 3,
                       inputFormatters: [
@@ -46,7 +46,7 @@ class CardBack extends StatelessWidget {
                         return null;
                       },
                       focusNode: cvvFocus,
-                    ),
+                    ),*/
                   ),
                 ),
                 Expanded(

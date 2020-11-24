@@ -30,9 +30,11 @@ dependencies:
   cupertino_icons: ^1.0.0
   keyboard_actions: ^3.3.1+1
   credit_card_type_detector: ^1.1.0
-  mask_text_input_formatter: ^1.1.0
   flip_card: ^0.4.4
   brasil_fields: ^0.6.0
+  mask_text_input_formatter: ^1.1.0
+  credit_card: ^0.1.8
+  get: ^3.17.1
 
 dev_dependencies:
   flutter_test:
