@@ -78,6 +78,7 @@ class _HomePageState extends State<HomePage> {
                         text: "Você perderá as suas informações de assinatura. ",
                         confirmBtnText: "Sim",
                         cancelBtnText: "Não",
+                        showCancelBtn: true,
                         confirmBtnColor: Colors.green
                     );
                   },
