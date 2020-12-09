@@ -3,6 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:sinppetcreditcard/components/card_text_field.dart';
 
 class CardBack extends StatelessWidget {
+  final FocusNode cvvFocus;
+
+  CardBack({this.cvvFocus});
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -29,7 +33,7 @@ class CardBack extends StatelessWidget {
                     margin: const EdgeInsets.only(left: 12),
                     padding:
                         const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                    child: CardTextField(
+/*                    child: CardTextField(
                       hint: '123',
                       maxLength: 3,
                       inputFormatters: [
@@ -41,7 +45,8 @@ class CardBack extends StatelessWidget {
                         if (cvv.length != 3) return 'Inválido';
                         return null;
                       },
-                    ),
+                      focusNode: cvvFocus,
+                    ),*/
                   ),
                 ),
                 Expanded(
